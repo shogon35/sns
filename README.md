@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+sns型ウェブアプリケーションです。
+実装されている機能
+１．ログイン機能
+２．投稿機能
+３．いいね機能
+４．登録情報の変更
+５．過去の投稿を見ることができる
+６．リアルタイムチャット機能
