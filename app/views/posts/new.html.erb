@@ -1,0 +1,15 @@
+<div class="tweet_me">
+    <h1>投稿する</h1>
+    <%= form_tag("/posts/create") do %>
+        <div class="container">
+             <p class="error_message">
+                <% @post.errors.full_messages.each do |message| %>
+                    <%= message %>
+                <% end %>
+            </p>
+
+            <textarea name="context"><%= @post.context%></textarea>
+            <input type="submit" value="投稿" class="tweet_me_btn">
+        </div>
+    <% end %>
+</div>

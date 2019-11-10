@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyTwitter</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/5283c5aa45.js"></script>
+  </head>
+
+  <body>
+    <header>
+        <ul>
+          <i class="fab fa-twitter fa-3x"></i>
+          <li>
+            <% if session[:user_id] %>
+              <img src="<%= "/user_image/#{@current_user.user_image_name}"%>" class="post_index_img">
+              <%= link_to(@current_user.name,"/users/#{@current_user.id}",class:"link")%>
+            <% end %>
+          </li>
+          <li>
+            <i class="fas fa-home"></i>
+            <%= link_to("ホーム","/",class:"link")%>
+          </li>
+          <li><i class="fas fa-fire-alt"></i>話題を検索</li>
+          <li><i class="far fa-bell"></i>通知</li>
+          <li>
+            <i class="far fa-envelope"></i>
+            <%= link_to("メッセージ","/rooms/index",class:"link") %>
+          </li>
+          <li>
+            <i class="fas fa-user-alt"></i>
+            <%= link_to("プロフィール","/users/#{@current_user.id}",class:"link")%>
+          </li>
+          <li>
+            <i class="fas fa-user-friends"></i>
+            <%= link_to("ユーザ一覧","/users/index",class:"link") %>
+          </li>
+          <li>
+            <i class="fas fa-list-ul"></i>
+            <%= link_to("ツイート一覧","/posts/index",class:"link") %>
+          </li>
+          <li>
+            <i class="far fa-address-card"></i>
+            <%= link_to("新規登録","/users/signup",class:"link") %>
+          </li>
+          <li>
+            <i class="fas fa-sign-in-alt"></i>
+            <%= link_to("login","/login",class:"link") %>
+          </li>
+          <li>
+            <i class="fas fa-sign-out-alt"></i>
+            <%= link_to("logout","/logout",{method:"post" , class:"link"}) %>
+          </li>
+
+          <li><%= link_to("ツイートする","/posts/new",class:"link tweet_nav") %></li>
+        </ul>
+    </header>
+
+    <% if flash[:notice] %>
+      <p class="flash_message">
+        <%= flash[:notice]%>
+      </p>
+    <% end %>
+
+    <section class="main">
+      <%= yield %>
+    </section>
+  </body>
+</html>

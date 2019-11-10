@@ -1,0 +1,72 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.all_users{
+    display: block;
+    width: 500px;
+}
+
+.user{
+    padding: 20px;
+    border: solid 1px rgb(66, 66, 66);
+}
+
+.dtl_user{
+    display: block;
+    border: solid 1px rgb(66, 66, 66);
+}
+
+.signup{
+    display: block;
+    padding: 20px;
+    border: solid 1px rgb(66, 66, 66);
+}
+
+.sign_btn{
+    display: block;
+    width: 100px;
+    padding: 10px;
+    margin: 20px;
+    background-color:#00bef2b9;
+    color: white;
+    border-radius: 50px; 
+}
+
+.user_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.login{
+    display: block;
+    padding: 20px;
+    border: solid 1px rgb(66, 66, 66);
+}
+
+
+//投稿一覧
+.user_show{
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.tweet_show{
+    display: block;
+    border-top: solid 1px rgb(66, 66, 66);
+    border-bottom: solid 1px rgb(66, 66, 66);
+    padding: 10px;
+}
+
+.post_show_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.tweet_user_show{
+    display: flex;
+    margin-bottom: 0;
+
+}

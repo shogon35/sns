@@ -1,0 +1,17 @@
+<section class="signup">
+    <%= form_tag("/users/create") do %>
+        <p class="error_message">
+            <% @user.errors.full_messages.each do |message| %>
+                <%= message %>
+            <% end %>
+        </p>
+
+        <p>ユーザー名</p>
+        <input type="name" name="name" value="<%= @user.name%>">
+        <p>メールアドレス</p>
+        <input type="mail" name="email" value="<%= @user.email%>">
+        <p>パスワード</p>
+        <input type="password" name="password" value="<%= @user.password%>">
+        <input type="submit" value="新規登録" class="sign_btn">
+    <% end %>
+</section>

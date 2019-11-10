@@ -1,0 +1,34 @@
+.<section class="dtl_user">
+    <section class="user_show">
+        <img src="<%= "/user_image/#{@user.user_image_name}" %>" class="user_img">
+        <p><%= @user.name %></p>
+        <p><%= @user.email %></p>
+
+        <% if @user.id == @current_user.id %>
+        <%= link_to("編集","/users/#{@user.id}/edit",class:"link")%>
+        <%= link_to("削除","/users/#{@user.id}/destroy",{method:"post" , class:"link"})%>
+        <% end %>
+    </section>
+
+    <% @user.posts.each do |post| %>
+    <section class="tweet_show">
+        <div class="tweet_user_show">
+            <img src="<%= "/user_image/#{post.user.user_image_name}"%>" class="post_show_img">
+            <div class="tweet_user_name">
+                <%= link_to(post.user.name,"/users/#{post.user.id}",class:"link")%>
+                <p><%= post.user.email %></p>
+            </div>
+        </div>
+        <ul class="user-tabs">
+            <li><%= link_to("投稿", "/users/#{@user.id}") %></li>
+            <li class="active"><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
+        </ul>
+
+        <% @likes.each do |like| %>
+            <% post1 = Post.find_by(id: like.post_id) %>
+            <p><%= link_to(post1.context,"/posts/#{post1.id}",class:"link") %></p>          
+        <%end%>
+        
+    </section>
+    <% end %>
+</section>

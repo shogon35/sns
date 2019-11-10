@@ -1,0 +1,144 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tweet{
+    display: block;
+    width: 500px;
+    border: solid 1px rgb(66, 66, 66);
+    
+}
+
+.tweet>h1{
+    padding: 0 50px 0 10px;
+    border-bottom: solid 1px rgb(66, 66, 66);
+    text-align: center;
+}
+
+
+
+.dtl_tweet{
+    display: block;
+    padding: 30px;
+    border: solid 1px rgb(66, 66, 66);
+}
+
+.dtel_tweet{
+    font-size: 15px;
+}
+
+.tweet_date_time{
+    color: rgb(143, 143, 143);
+    font-size: 10px;
+}
+
+.tweet_me{
+    display: block;
+}
+
+.container>textarea{
+    width: 450px;
+    height: 300px;
+    margin: 50px 25px;
+    font-size: 20px;
+    background-color: rgb(33, 51, 68);  
+    color: white;
+}
+
+// ボタン
+.tweet_me_btn{
+    display: block;
+    width: 80px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+}
+.tweet_me_btn:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
+}
+
+.container{
+    display: block;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    border: solid 1px rgb(66, 66, 66);
+}
+
+// 編集ボタン
+.edit{
+    color: rgb(66, 66, 66);
+    font-size: 15px;
+}
+
+// error_message
+.error_message{
+    color: rgb(187, 0, 0);
+}
+
+// ツイートのユーザ画像
+.post_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+.tweet_user{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+
+.tweet_user_name>a{
+    font-size: 20px;
+}
+
+.tweet_user_name>p{
+    font-size: 10px;
+    color: rgb(134, 134, 134);
+    margin-top: 2px; 
+}
+
+
+.tweet_user_name{
+    display: block;
+    top: 0;
+    bottom: 0;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+//投稿一覧
+.post_index_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.tweet_user_index{
+    display: flex;
+    margin: 15px  15px 0;
+
+}
+
+.tweet_index_one{
+    margin: 0  15px;
+    border-bottom: solid 1px rgb(66, 66, 66);
+}
+
+.tweet_index_one p{
+    padding: 0;
+    margin: 10px ; 
+}
+
+.heart{
+    color: rgb(255, 119, 142);
+}

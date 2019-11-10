@@ -1,0 +1,18 @@
+<section class="signup">
+    <%= form_tag("/users/#{@user.id}/update",{multipart: true}) do %>
+        <p class="error_message">
+            <% @user.errors.full_messages.each do |message| %>
+                <%= message %>
+            <% end %>
+        </p>
+
+        <p>ユーザー名</p>
+        <input type="name" name="name" value="<%= @user.name%>">
+        <p>メールアドレス</p>
+        <input type="mail" name="email" value="<%= @user.email%>">
+        <p>ユーザー画像</p>
+        <input type="file" name="image">
+        <input type="submit" value="保存" class="sign_btn">
+        <p>＊画像は正方形の物を選んで下さい</p>
+    <% end %>
+</section>

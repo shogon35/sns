@@ -1,0 +1,15 @@
+<section class=login>
+    <% if @error_message %>
+        <p class="error_message">
+            <%= @error_message %>
+        </p>
+    <% end %>
+
+    <%= form_tag("/login") do%>
+    <p>メールアドレス</p>
+    <input type="mail" name="email" value="<%= @email%>">
+    <p>パスワード</p>
+    <input type="password" name="password" value="<%= @password%>">
+    <input type="submit" value="login" class="sign_btn">
+    <% end %>
+</section>

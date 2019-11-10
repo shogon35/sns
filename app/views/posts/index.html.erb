@@ -1,0 +1,16 @@
+<main class="tweet">
+    <h1>ツイート一覧</h1>
+
+    <% @posts.each do |post| %>
+    <section class="tweet_index_one">
+        <div class="tweet_user_index">
+            <img src="<%= "/user_image/#{post.user.user_image_name}"%>" class="post_index_img">
+            <div class="tweet_user_name">
+                <%= link_to(post.user.name,"/users/#{post.user.id}",class:"link")%>
+                <p><%= post.user.email %></p>
+            </div>
+        </div>
+        <p><%= link_to(post.context,"/posts/#{post.id}",class:"link") %></p>
+    </section>
+    <% end %>
+</main>

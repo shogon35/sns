@@ -1,0 +1,13 @@
+<div>
+  <ul>
+    <% @rooms.each do |room| %>
+      <li><%= link_to "ROOM#{room.id}", room_path(room) ,class:"link" %></li>
+    <% end %>
+
+    <li>
+        <i class="fas fa-plus"></i>
+        <%= link_to("追加","/rooms/create",class:"edit link") %>
+    </li>
+    
+  </ul>
+</div>

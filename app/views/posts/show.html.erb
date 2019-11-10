@@ -1,0 +1,25 @@
+<div class="dtl_tweet">
+    <div class="tweet_user">
+        <img src="<%= "/user_image/#{@user.user_image_name}"%>" class="post_img">
+        <div class="tweet_user_name">
+            <%= link_to(@user.name,"/users/#{@user.id}",class:"link")%>
+            <p><%= @user.email %></p>
+        </div>
+    </div>
+    <p><%= @post.context %></p>
+
+    <% if Like.find_by(user_id: @current_user.id,post_id: @post)%>
+        <%= link_to("/likes/#{@post.id}/destroy",{method:"post",class:"edit link"}) do%>
+            <i class="fas fa-heart heart"></i>
+        <% end %>
+    <% else %>
+        <%= link_to("/likes/#{@post.id}/create",{method:"post",class:"edit link"}) do%>
+            <i class="far fa-heart heart"></i>
+        <% end %>
+    <% end %>
+    <%= @likes_count %>
+
+    <%= link_to("編集","/posts/#{@post.id}/edit",class:"edit link") %>
+    <%= link_to("削除","/posts/#{@post.id}/destroy",{method:"post" , class:"edit link"}) %>
+    <p class="tweet_date_time"><%= @post.created_at %></p>
+</div>

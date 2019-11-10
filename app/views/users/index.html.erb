@@ -1,0 +1,8 @@
+<section class="all_users">
+    <% @users.each do |user|%>
+    <img src="<%= "/user_image/#{user.user_image_name}" %>" class="user_img">
+        <p class="user">
+            <%= link_to(user.name,"/users/#{user.id}",class:"link") %>
+        </p>
+    <% end %>
+</section>
